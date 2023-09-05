@@ -1,0 +1,176 @@
+@media screen and (max-width: 400px) {
+    .image{
+        height: 35vh;
+        width: 53%;
+    }
+
+    .article{
+        padding: 5%;
+        width: 92%;
+        height: 45vh;
+        margin: 10% 1% 4% 0%;
+    }
+
+    .performance{
+        font-size: 130%;
+    }
+
+    .company{
+        font-size: 130%;
+    }
+
+    .information {
+        font-size: 82%;
+    }
+
+    .divTitle {
+        font-size: 160%;
+        margin-top: 20%;
+    }
+
+    .titleBar {
+        margin: 1% 70% 10% -2%;
+    }
+
+    .divHead{
+        display: block;
+    }
+
+    #header h4 {
+        margin: 0% 30% 2% 6%;
+    }
+
+    #header i{
+        display: block;
+        color: white;
+        margin: 3% 0% 0% 25%;
+        font-size: 120%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .nav{
+        display: block;
+        line-height: 200%;
+        padding-bottom: 4%;
+        margin: 10% 0% 0% 6%;
+        transform: translateX(-295px) translateY(20px);
+    }
+
+    #home {
+        display: block;
+    }
+
+    #home div {
+        padding-top: 10%;
+        line-height: 300%;
+        transform: translateX(-500px);
+    }
+
+    #home h5 {
+        font-size: 120%;
+    }
+
+    .title {
+        font-size: 200%;
+    }
+
+    #home span {
+        font-size: 100%;
+    }
+
+    #home p {
+        font-size: 100%;
+        line-height: 200%;
+    }
+
+    #home button {
+        font-size: 120%;
+        padding: 2% 4%;
+        margin: 4% 0% 0% 0%;
+        border-radius: 25px;
+    }
+
+    #home button:hover {
+        font-size: 130%;
+    }
+
+    #home img {
+        margin: 10% 15% 0% 20%;
+    }
+
+    #about {
+        display: block;
+        padding: 2% 8% 5% 8%;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    #about div {
+        line-height: 180%;
+        transform: translateX(500px);
+        margin-top: 20%;
+    }
+
+    #about hr {
+        margin: 10% 0%;
+    }
+
+    .mobile{
+        display: block;
+        margin: 4% 15% 0% 18%;
+        width: 62%;
+    }
+
+    #education div {
+        display: block;
+        padding-bottom: 5%;
+    }
+
+    #education div div {
+        line-height: 200%;
+    }
+    
+    #education article {
+        padding-top: 3%;
+    }
+
+    #technologies{
+        padding-bottom: 7%;
+    }
+
+    #technologies div{
+        display: flex;
+    }
+
+    #technologies article {
+        padding: 1%;
+        height: 10vh;
+        width: 20%;
+        margin-right: 15%;
+    }
+    
+    #technologies h5 {
+        font-size: 100%;
+    }
+    
+    #technologies h6 {
+        font-size: 100%;
+        font-weight: 500;
+    }
+
+    #experience article {
+        line-height: 200%;
+    }
+    
+    #footer{
+        margin: 0%;
+    }
+    #footer h1 {
+        font-size: 20%;
+    }
+}
