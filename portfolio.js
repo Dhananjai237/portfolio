@@ -18,8 +18,11 @@ const hom = document.querySelector('#home');
 const abou = document.querySelector('#about');
 const educat = document.querySelector('#education');
 const front = document.querySelector('#technologies');
+const prog = document.querySelector('#programming_languages');
 const tec = document.querySelector('#tech');
 const exp = document.querySelector('#experience');
+const intern = document.querySelector('#internships');
+const job = document.querySelector('#jobs');
 const project = document.querySelector('#projects');
 const extr = document.querySelector('#extra');
 
@@ -45,21 +48,20 @@ document.querySelector('#footer button').addEventListener('click', () => {
     });
 });
 
-const span1 = 'Front End Web Developer';
-// const span2 = 'Python Developer';
+const phrases_array = ['Junior Software Engineer', 'Web Developer', 'Python & MySQL Developer', 'Full-Stack & AI Enthusiast'];
 const spanTag = document.querySelector('span');
 let i = 0;
 let j;
-function forward(span) {
-    j = span.length;
-    forwarding(span);
+function forward(phrase) {
+    j = phrase.length;
+    forwarding(phrase);
 };
-function forwarding(span) {
-    if (i < span.length) {
-        spanTag.textContent += span[i];
+function forwarding(phrase) {
+    if (i < phrase.length) {
+        spanTag.textContent += phrase[i];
         i++;
         setTimeout(() => {
-            forwarding(span);
+            forwarding(phrase);
         }, 150)
     }
     else {
@@ -75,12 +77,17 @@ function backward() {
         }, 100)
     }
     else {
-        // j ==23?forward(span2):forward(span1);
-        forward(span1);
+        index += 1;
+        if (index == 4) {
+            index = 0;
+        };
+        forward(phrases_array[index]);
     }
 };
+
+index = 0
 setTimeout(() => {
-    forward(span1);
+    forward(phrases_array[index]);
 }, 1500);
 
 const options = {
@@ -159,6 +166,20 @@ function technologies(entries) {
 const technologiesIntersection = new IntersectionObserver(technologies, options);
 technologiesIntersection.observe(front);
 
+function program(entries) {
+    [entry] = entries;
+    if (entry.isIntersecting == true) {
+        document.querySelector('#programming_languages h4').style.transform = 'translateY(0px)';
+        document.querySelector('#programming_languages h4').style.opacity = 1;
+        document.querySelector('#programming_languages hr').style.transform = 'translateY(0px)';
+        document.querySelector('#programming_languages hr').style.opacity = 1;
+        document.querySelector('#programming_languages div').style.transform = 'translateY(0px)';
+        document.querySelector('#programming_languages div').style.opacity = 1;
+    }
+};
+const programIntersection = new IntersectionObserver(program, options);
+programIntersection.observe(prog);
+
 function tech(entries) {
     [entry] = entries;
     if (entry.isIntersecting == true) {
@@ -193,7 +214,6 @@ function experience(entries) {
 const experienceIntersection = new IntersectionObserver(experience, options);
 experienceIntersection.observe(exp);
 
-const intern = document.querySelector('#internships');
 function internships(entries) {
     [entry] = entries;
     if (entry.isIntersecting == true) {
@@ -207,6 +227,20 @@ function internships(entries) {
 };
 const internshipsIntersection = new IntersectionObserver(internships, options);
 internshipsIntersection.observe(intern);
+
+function proffessional(entries) {
+    [entry] = entries;
+    if (entry.isIntersecting == true) {
+        document.querySelector('#jobs h4').style.transform = 'translateY(0px)';
+        document.querySelector('#jobs h4').style.opacity = 1;
+        document.querySelector('#jobs hr').style.transform = 'translateY(0px)';
+        document.querySelector('#jobs hr').style.opacity = 1;
+        document.querySelector('#jobs div').style.transform = 'translateY(0px)';
+        document.querySelector('#jobs div').style.opacity = 1;
+    }
+};
+const jobIntersection = new IntersectionObserver(proffessional, options);
+jobIntersection.observe(job);
 
 function projects(entries) {
     [entry] = entries;
