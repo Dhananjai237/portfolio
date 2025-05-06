@@ -36,6 +36,16 @@
         display: block;
     }
 
+    .gridDiv {
+        display: block;
+    }
+
+    .grid_article {
+        height: 55vh;
+        width: 55vh;
+        margin: 10% 0% 0% 0%;
+    }
+
     #header h4 {
         margin: 0% 30% 2% 6%;
     }
@@ -165,6 +175,10 @@
 
     #experience article {
         line-height: 200%;
+    }
+
+    #projects {
+        padding-bottom: 5%;
     }
     
     #footer{

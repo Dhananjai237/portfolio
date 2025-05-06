@@ -24,7 +24,6 @@ const exp = document.querySelector('#experience');
 const intern = document.querySelector('#internships');
 const job = document.querySelector('#jobs');
 const project = document.querySelector('#projects');
-const extr = document.querySelector('#extra');
 
 const links = document.querySelectorAll('nav a');
 for (let link of links) {
@@ -65,7 +64,9 @@ function forwarding(phrase) {
         }, 150)
     }
     else {
-        backward();
+        setTimeout(() => {
+            backward();
+        }, 100)
     }
 };
 function backward() {
@@ -92,8 +93,9 @@ setTimeout(() => {
 
 const options = {
     root: null,
-    threshold: 0.2,
+    threshold: 0.01,
 };
+
 function home(entries) {
     [entry] = entries;
     if (entry.isIntersecting == true) {
@@ -257,16 +259,6 @@ function projects(entries) {
 };
 const projectsIntersection = new IntersectionObserver(projects, options);
 projectsIntersection.observe(project);
-
-function extra(entries) {
-    [entry] = entries;
-    if (entry.isIntersecting == true) {
-        document.querySelector('#extra').style.transform = 'translateY(0px)';
-        document.querySelector('#extra').style.opacity = 1;
-    }
-};
-const extraIntersection = new IntersectionObserver(extra, options);
-extraIntersection.observe(extr);
 
 const articles = document.querySelectorAll('#projects article');
 for (let article of articles) {
