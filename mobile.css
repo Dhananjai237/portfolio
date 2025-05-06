@@ -1,4 +1,4 @@
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
     .image{
         height: 35vh;
         width: 53%;
@@ -42,6 +42,7 @@
 
     .grid_article {
         height: 55vh;
+        width: 40vh;
         margin: 10% 0% 0% 0%;
     }
 
