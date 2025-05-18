@@ -37,7 +37,7 @@ for (let link of links) {
 };
 
 document.querySelector('#home button').addEventListener('click', () => {
-    window.open("https://drive.google.com/file/d/1YEsEnuB8EawZG6c6WReQ_uvcDAFTiKys/view?usp=drivesdk");
+    window.open("https://drive.google.com/file/d/1gCIqn6hjd0DlUri59zeliAioZoIQBS2E/view?usp=drive_link");
 });
 
 document.querySelector('#footer button').addEventListener('click', () => {
